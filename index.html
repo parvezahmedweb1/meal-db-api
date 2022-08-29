@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Meal DB</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body class="text-white">
+    <header class="header-section py-4">
+      <div class="text-center container">
+        <img src="images/logo-small.png" alt="" />
+      </div>
+    </header>
+    <main>
+      <!-- ! home section -->
+      <section class="py-4">
+        <div class="container">
+          <div class="d-flex align-items-center">
+            <img src="images/meal-icon.png" alt="" />
+            <div class="text-center">
+              <h1 class="fw-bold display-4">Welcome to TheMealDB</h1>
+              <p>
+                Welcome to TheMealDB: An open, crowd-sourced database of Recipes
+                from around the world.
+              </p>
+              <button class="btn btn-warning px-4 py-2">Learn More</button>
+            </div>
+            <img src="images/meal-icon.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- ! search section -->
+      <section class="py-4">
+        <div class="container">
+          <p class="border border-1 text-white"></p>
+          <div class="input-group mb-3 w-50 mx-auto">
+            <input
+              id="search-input"
+              type="text"
+              class="form-control py-2"
+              placeholder="Search For Meal..."
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+            />
+            <button class="btn btn-light border" type="button" id="search-btn">
+              Search
+            </button>
+          </div>
+          <div class="d-flex justify-content-center">
+            <h4 class="me-5">
+              Search Meals: <span id="total-search" class="text-info">0</span>
+            </h4>
+            <h4>
+              Total Meals Categories:
+              <span id="total-categories" class="text-info">0</span>
+            </h4>
+          </div>
+          <p class="border border-1 text-white"></p>
+        </div>
+      </section>
+      <!-- ! meals section -->
+      <section class="my-4">
+        <div class="container">
+          <div class="text-center">
+            <h2 id="meals-title">All Meals Categories</h2>
+          </div>
+          <div
+            id="spinner"
+            class="spinner-border text-warning mx-auto"
+            role="status"
+          >
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <!-- ! meals -->
+          <div
+            id="meals-container"
+            class="row row-cols-1 row-cols-md-4 g-4 mt-4"
+          ></div>
+          <!-- ! modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered text-dark">
+              <div class="modal-content">
+                <div id="modal-body" class="modal-body"></div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Save changes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-warning mt-4 w-25 mx-auto d-block">
+            View All
+          </button>
+        </div>
+      </section>
+    </main>
+    <!--  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
